@@ -1,4 +1,4 @@
-.c-mv {
+.c-menu {
     padding: 40px 0;
     &__logo {
         display: flex;
@@ -34,7 +34,7 @@
         &-item {
             position: relative;
             &:hover {
-                .c-mv__menu-item-dropdown {
+                .c-menu__menu-item-dropdown {
                     opacity: 1;
                     visibility: visible;
                     z-index: 0;
