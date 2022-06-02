@@ -1,0 +1,18 @@
+.c-mv__menu-item-dropdown {
+    background: $color_white;
+    min-width: 227px;
+    top: 40px;
+    left: -6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.22);
+    &-text {
+        color: $color_red;
+        font-size: 18px;
+        padding: 10px 32px;
+        cursor: pointer;
+        &:hover {
+            background-color: $color_red;
+            color: $color_white;
+            transition: all 0.3s ease;
+        }
+    }
+}

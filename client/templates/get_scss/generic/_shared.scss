@@ -9,7 +9,7 @@ body {
         margin: 0 auto;
     }
 
-    @include bp('sp') {
+    @include bp("sp") {
         overflow-x: hidden;
         padding-top: calculateRem(60px);
         min-width: 300px;
@@ -23,17 +23,91 @@ body {
 .only-sp {
     display: none;
 
-    @include bp('sp') {
+    @include bp("sp") {
         display: block;
     }
 }
 
 .only-pc {
-    @include bp('sp') {
+    @include bp("sp") {
         display: none;
     }
 }
 
 .c-desc p {
     text-align: justify;
+}
+
+.c-button-summit {
+    color: $color_white;
+    font-size: 16px;
+    background: $color_red;
+    border: none;
+    padding: 12px 26px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.hover-animation {
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+    &::before {
+        content: "";
+        min-height: 1px;
+        width: 0;
+        background-color: $color_base;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+}
+
+.hover-animation--red {
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+    &::before {
+        content: "";
+        min-height: 1px;
+        width: 0;
+        background-color: $color_red;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+}
+
+.hover-opacity {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.hover-scale {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.hover-color-red {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        color: $color_red;
+    }
 }

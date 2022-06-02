@@ -13,26 +13,10 @@
             display: flex;
             align-items: center;
             margin-right: 118px;
-            cursor: pointer;
-            &:hover &-text {
-                &::before {
-                    width: 100% !important;
-                }
-            }
             &-text {
                 color: $color_red;
                 margin-left: 12px;
                 font-size: 18px;
-                position: relative;
-                &::before {
-                    content: "";
-                    min-height: 1px;
-                    width: 0;
-                    background-color: $color_red;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                }
             }
         }
         &__phone {
