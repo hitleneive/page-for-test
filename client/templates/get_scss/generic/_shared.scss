@@ -1,0 +1,39 @@
+body {
+    font-family: $font_base;
+
+    a:hover {
+        opacity: 0.8;
+    }
+
+    hr {
+        margin: 0 auto;
+    }
+
+    @include bp('sp') {
+        overflow-x: hidden;
+        padding-top: calculateRem(60px);
+        min-width: 300px;
+
+        hr {
+            width: 100% !important;
+        }
+    }
+}
+
+.only-sp {
+    display: none;
+
+    @include bp('sp') {
+        display: block;
+    }
+}
+
+.only-pc {
+    @include bp('sp') {
+        display: none;
+    }
+}
+
+.c-desc p {
+    text-align: justify;
+}

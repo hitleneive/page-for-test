@@ -1,0 +1,70 @@
+.c-header {
+    padding: 10px 0;
+    background-color: $color_grey_light;
+    @include bp("sp") {
+        display: none;
+    }
+    &__icon {
+        color: $color_grey;
+        font-size: 18px;
+    }
+    .c-left-header {
+        &__logo {
+            display: flex;
+            align-items: center;
+            margin-right: 118px;
+            cursor: pointer;
+            &:hover &-text {
+                &::before {
+                    width: 100% !important;
+                }
+            }
+            &-text {
+                color: $color_red;
+                margin-left: 12px;
+                font-size: 18px;
+                position: relative;
+                &::before {
+                    content: "";
+                    min-height: 1px;
+                    width: 0;
+                    background-color: $color_red;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+        &__phone {
+            display: flex;
+            align-items: center;
+            margin-right: 56px;
+            &-number {
+                font-size: 18px;
+                margin-left: 10px;
+                letter-spacing: 0;
+            }
+        }
+        &__mail {
+            display: flex;
+            align-items: center;
+            margin-right: 205px;
+            &-text {
+                font-size: 18px;
+                margin-left: 10px;
+                letter-spacing: 0;
+            }
+        }
+        &__notion {
+            &-text {
+                color: $color_grey;
+                letter-spacing: 0.8px;
+            }
+        }
+    }
+    .c-right-header {
+        i + i {
+            margin-left: 17px;
+        }
+    }
+}

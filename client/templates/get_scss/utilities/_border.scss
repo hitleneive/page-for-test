@@ -1,0 +1,10 @@
+.c-border {
+	&__dash {
+		width: 100%;
+		height: calculateRem(30px);
+		background: url('../images/line.png');
+		background-size: calculateRem(7px) calculateRem(30px);
+		max-width: calculateRem(1110px);
+		margin: 0 auto;
+	}
+}
