@@ -8,8 +8,7 @@
 @import "generic/_reset";
 @import "generic/_shared";
 
-@import "elements/_headings";
-@import "elements/_lists";
+@import "elements/_slick";
 
 @import "objects/_animations";
 @import "objects/_media";
@@ -18,6 +17,7 @@
 @import "components/_header";
 @import "components/_menu";
 @import "components/_dropdown-menu";
+@import "components/_mv";
 
 @import "utilities/_background";
 @import "utilities/_border";

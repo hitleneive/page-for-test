@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    max-width: calculateRem($pc_width_max);
+    max-width: calculateRem($pc_width_max_big);
     margin: 0 auto;
     position: relative;
     padding-left: calculateRem(75px);
@@ -10,9 +10,18 @@
         min-width: 100%;
         margin: 0 auto;
     }
+
+    &--medium {
+        width: 100%;
+        max-width: calculateRem($pc_width_max);
+        margin: 0 auto;
+        position: relative;
+        padding-left: calculateRem(75px);
+        padding-right: calculateRem(75px);
+    }
 }
 
-@include bp('sp') {
+@include bp("sp") {
     .container {
         width: 100%;
         padding: 0 calculateRem(15px);

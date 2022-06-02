@@ -1,0 +1,63 @@
+.c-mv {
+    position: relative;
+    z-index: 1;
+    &__slick {
+        .slick-dots {
+            text-align: right;
+            bottom: 238px;
+            right: -5px;
+        }
+        &-item {
+            position: relative;
+            height: 620px;
+        }
+        &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &-content {
+            position: absolute;
+            top: 78px;
+            width: 100%;
+            &-title {
+                color: $color-white;
+                font-size: 64px;
+            }
+            &-desc {
+                color: $color-white;
+                font-size: 24px;
+                max-width: 560px;
+                line-height: 1.4;
+                margin-bottom: 18px;
+            }
+            &-price {
+                color: $color-white;
+                margin-bottom: 12px;
+                span {
+                    &:first-child {
+                        font-size: 31px;
+                        font-weight: 500;
+                    }
+                    &:last-child {
+                        font-size: 18px;
+                    }
+                }
+            }
+            &-button {
+                background: none;
+                color: $color-white;
+                font-size: 16px;
+                border: 2px solid $color-white;
+                padding: 10px 23px;
+                letter-spacing: 1.3px;
+                font-weight: 600;
+                &:hover {
+                    background-color: $color_red;
+                    border-color: $color_red;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
