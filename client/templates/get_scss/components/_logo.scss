@@ -1,0 +1,33 @@
+.c-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    &-icon {
+        font-size: 40px;
+        color: $color_red;
+        margin-right: 12px;
+        transition: all 0.3s ease;
+    }
+    &-text {
+    }
+    &-text-1 {
+        display: block;
+        font-size: 22px;
+        line-height: 1;
+        letter-spacing: 2px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+    &-text-2 {
+        font-size: 22px;
+        line-height: 1;
+        letter-spacing: 2px;
+        color: $color_red;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+}

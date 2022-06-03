@@ -2,11 +2,12 @@
     padding-top: 90px;
     position: relative;
     .c-heading-section {
+        cursor: default;
         margin-bottom: 56px;
     }
     &__inner {
         overflow: hidden;
-        padding-bottom: 154px;
+        padding-bottom: 150px;
     }
     &__carousel {
         &-item {
@@ -30,6 +31,7 @@
     }
     .swiper {
         overflow: visible;
+        height: 170px;
     }
     .swiper-slide {
         display: flex;
@@ -46,7 +48,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: -64px !important;
+    bottom: -40px !important;
+    left: -12px !important;
     .swiper-pagination-bullet {
         background-color: $color_grey;
         opacity: 1 !important;

@@ -19,6 +19,7 @@
             color: $color_grey;
             padding: 10px 20px;
             cursor: pointer;
+            text-overflow: ellipsis;
             &:focus {
                 outline: none;
             }

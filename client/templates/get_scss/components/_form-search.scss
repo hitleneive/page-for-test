@@ -25,6 +25,10 @@
         .c-button-summit {
             margin-top: 28px;
             min-width: 160px;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: $color_red_500;
+            }
         }
         & > .u-flex + .u-flex {
             margin-top: 28px;
