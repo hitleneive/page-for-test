@@ -1,5 +1,5 @@
 window.onload = function () {
-  const swiper = new Swiper(".c-carousel", {
+  const swiper1 = new Swiper(".c-carousel", {
     // Optional parameters
     direction: "horizontal",
     loop: true,
@@ -7,12 +7,22 @@ window.onload = function () {
     // If we need pagination
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
 
     longSwipesMs: 1000,
     autoplay: {
       delay: 3000,
       pauseOnMouseEnter: true,
+    },
+  });
+
+  var slider = new KeenSlider(".c-members__list", {
+    loop: true,
+    rtl: true,
+    spaceBetween: 0,
+    slides: {
+      perView: 4,
     },
   });
 

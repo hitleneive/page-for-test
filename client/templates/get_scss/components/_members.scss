@@ -1,0 +1,48 @@
+.c-members {
+    &__list {
+    }
+    &__items {
+    }
+    &__item {
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            .c-button-summit {
+                height: unset;
+                overflow: inherit;
+                margin-top: 20px;
+                padding: 12px 26px;
+                opacity: 1;
+                position: relative;
+            }
+        }
+        &-content {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+        }
+        &-title {
+            font-size: 24px;
+            line-height: 32px;
+            color: $color-white;
+            font-weight: 500;
+        }
+        &-role {
+            font-size: 18px;
+            line-height: 28px;
+            color: $color-white;
+        }
+        .c-button-summit {
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+            opacity: 0;
+            position: absolute;
+        }
+    }
+}
