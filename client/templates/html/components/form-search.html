@@ -28,24 +28,30 @@
                     <div class="c-form-search__form-group">
                         <label class="c-form-search__form-label">Price (USD)</label>
                         @@include('./range-slider.html',{ "id": "range-slider-price", "fromValue": "100", 'toValue':
-                        '8000', "step": '10' })
+                        '8000', "step": '10', "class": "c-form-search__form-range-slider" })
                     </div>
                     <div class="c-form-search__form-group">
                         <label class="c-form-search__form-label">Area (Sq Ft)</label>
                         @@include('./range-slider.html',{ "id": "range-slider-area", "fromValue": "1000", 'toValue':
-                        '22000', "step": '100' })
+                        '22000', "step": '100', "class": "c-form-search__form-range-slider" })
                     </div>
                     <div class="c-form-search__form-group">
                         <label class="c-form-search__form-label">Min Beds</label>
                         @@include('./custom-dropdown.html',{ "defaultSelect": "Any", "options": ['Any', 'Denver',
-                        'Houston', 'Las Vegas', 'Orlando', 'Phoenix', 'San Diego', 'Miami', 'Atlanta'] })
+                        'Houston', 'Las Vegas', 'Orlando', 'Phoenix', 'San Diego', 'Miami', 'Atlanta'], "class":
+                        "c-form-search__form-dropdown" })
                     </div>
                     <div class="c-form-search__form-group">
                         <label class="c-form-search__form-label">Min Baths</label>
                         @@include('./custom-dropdown.html',{ "defaultSelect": "Any", "options": ['Any', 'Denver',
-                        'Houston', 'Las Vegas', 'Orlando', 'Phoenix', 'San Diego', 'Miami', 'Atlanta'] })
+                        'Houston', 'Las Vegas', 'Orlando', 'Phoenix', 'San Diego', 'Miami', 'Atlanta'], "class":
+                        "c-form-search__form-dropdown" })
                     </div>
                     <button class="c-button-summit hover-opacity">SEARCH</button>
+                </div>
+                <div class="c-form-search__form-plus">
+                    <i class="fa-solid fa-plus c-form-search__form-plus-icon"></i>
+                    <p class="c-form-search__form-plus-text hover-animation--red">Looking for certain features</p>
                 </div>
             </form>
         </div>

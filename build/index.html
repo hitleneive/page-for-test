@@ -229,7 +229,7 @@
                             </div>
                             <div class="c-form-search__form-group">
                                 <label class="c-form-search__form-label">Location</label>
-                                <div class="c-dropdown">
+                                <div class="c-dropdown @@class">
                                     <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
                                     <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
                                     <div class="c-dropdown__options">
@@ -247,7 +247,7 @@
                             </div>
                             <div class="c-form-search__form-group">
                                 <label class="c-form-search__form-label">Property Status</label>
-                                <div class="c-dropdown">
+                                <div class="c-dropdown @@class">
                                     <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
                                     <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
                                     <div class="c-dropdown__options">
@@ -265,7 +265,7 @@
                             </div>
                             <div class="c-form-search__form-group">
                                 <label class="c-form-search__form-label">Property Type</label>
-                                <div class="c-dropdown">
+                                <div class="c-dropdown @@class">
                                     <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
                                     <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
                                     <div class="c-dropdown__options">
@@ -285,7 +285,7 @@
                         <div class="u-flex u-flex__y--flex-start u-flex__x--between">
                             <div class="c-form-search__form-group">
                                 <label class="c-form-search__form-label">Price (USD)</label>
-                                <div class="slider-content">
+                                <div class="slider-content c-form-search__form-range-slider">
                                     <div class="c-form-search__form-input-group u-flex u-flex__y--center u-flex__x--between">
                                         <input id="range-slider-price-min" class="c-input" type="text" value="100" placeholder="" disabled>
                                         <span class="c-form-search__form-dash">-</span>
@@ -306,7 +306,7 @@
                             </div>
                             <div class="c-form-search__form-group">
                                 <label class="c-form-search__form-label">Area (Sq Ft)</label>
-                                <div class="slider-content">
+                                <div class="slider-content c-form-search__form-range-slider">
                                     <div class="c-form-search__form-input-group u-flex u-flex__y--center u-flex__x--between">
                                         <input id="range-slider-area-min" class="c-input" type="text" value="1000" placeholder="" disabled>
                                         <span class="c-form-search__form-dash">-</span>
@@ -327,7 +327,7 @@
                             </div>
                             <div class="c-form-search__form-group">
                                 <label class="c-form-search__form-label">Min Beds</label>
-                                <div class="c-dropdown">
+                                <div class="c-dropdown c-form-search__form-dropdown">
                                     <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
                                     <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
                                     <div class="c-dropdown__options">
@@ -345,7 +345,7 @@
                             </div>
                             <div class="c-form-search__form-group">
                                 <label class="c-form-search__form-label">Min Baths</label>
-                                <div class="c-dropdown">
+                                <div class="c-dropdown c-form-search__form-dropdown">
                                     <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
                                     <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
                                     <div class="c-dropdown__options">
@@ -362,6 +362,10 @@
                                 </div>
                             </div>
                             <button class="c-button-summit hover-opacity">SEARCH</button>
+                        </div>
+                        <div class="c-form-search__form-plus">
+                            <i class="fa-solid fa-plus c-form-search__form-plus-icon"></i>
+                            <p class="c-form-search__form-plus-text hover-animation--red">Looking for certain features</p>
                         </div>
                     </form>
                 </div>

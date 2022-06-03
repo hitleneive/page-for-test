@@ -25,13 +25,15 @@
             margin-top: 28px;
             min-width: 160px;
         }
+        & > .u-flex + .u-flex {
+            margin-top: 28px;
+        }
         .slider {
-            margin: 12px -10px 0;
+            margin: 12px 0 0;
         }
     }
     &__form-group {
         flex: 1;
-        margin-bottom: 28px;
         &:not(:last-child) {
             margin-right: 30px;
         }
@@ -44,5 +46,34 @@
     &__form-dash {
         color: $color_grey;
         margin: 0 12px;
+    }
+    &__form-range-slider {
+        .c-input {
+            min-width: 140px;
+        }
+    }
+    &__form-dropdown {
+        .c-dropdown__text-box {
+            padding: 10px 30px 10px 20px;
+        }
+    }
+    &__form-plus {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        &-icon {
+            color: $color-white;
+            background: $color-red;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+        &-text {
+            color: $color-red;
+            font-size: 18px;
+        }
     }
 }
