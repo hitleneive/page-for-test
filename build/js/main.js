@@ -1,12 +1,23 @@
 window.onload = function () {
   const swiper1 = new Swiper(".c-carousel", {
-    // Optional parameters
     direction: "horizontal",
     loop: true,
-
-    // If we need pagination
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
+    },
+    longSwipesMs: 1000,
+    autoplay: {
+      delay: 3000,
+      pauseOnMouseEnter: true,
+    },
+  });
+
+  const swiper2 = new Swiper("#testimonials-carousel", {
+    direction: "horizontal",
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination-testimonials",
       clickable: true,
     },
 
