@@ -14,9 +14,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <link rel="stylesheet" href="css/lib/slick.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="c-page__index">
@@ -170,56 +169,206 @@
             </div>
         </section>
         <section class="c-mv">
-            <div id="mv-slick" class="c-mv__slick">
-                <div class="c-mv__slick-item">
-                    <img class="c-mv__slick-image" src="/images/mv-img-01.jpg" alt="slide">
-                    <div class="c-mv__slick-content">
-                        <div class="container--medium">
-                            <h1 class="c-mv__slick-content-title">1530-2 Liberty Ave 4</h1>
-                            <p class="c-mv__slick-content-desc">This is a 3 bedroom, 2.0 bathroom, multi family home. It is located at 1530 Liberty Ave Hillside,.</p>
-                            <p class="c-mv__slick-content-price">
-                                <span>$309.00</span>
-                                <span>/day</span>
-                            </p>
-                            <button class="c-mv__slick-content-button">BOOK NOW</button>
+            <div id="mv-carousel" class="c-carousel swiper">
+                <div class="swiper-wrapper c-mv__carousel">
+                    <div class="c-mv__carousel-item swiper-slide">
+                        <img class="c-mv__carousel-image" src="/images/mv-img-01.jpg" alt="slide">
+                        <div class="c-mv__carousel-content">
+                            <div class="container--medium">
+                                <h1 class="c-mv__carousel-content-title">1530-2 Liberty Ave 4</h1>
+                                <p class="c-mv__carousel-content-desc">This is a 3 bedroom, 2.0 bathroom, multi family home. It is located at 1530 Liberty Ave Hillside,.</p>
+                                <p class="c-mv__carousel-content-price">
+                                    <span>$309.00</span>
+                                    <span>/day</span>
+                                </p>
+                                <button class="c-mv__carousel-content-button">BOOK NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-mv__carousel-item swiper-slide">
+                        <img class="c-mv__carousel-image" src="/images/mv-img-02.jpg" alt="slide">
+                        <div class="c-mv__carousel-content">
+                            <div class="container--medium">
+                                <h1 class="c-mv__carousel-content-title">53 Rachel Ct 53</h1>
+                                <p class="c-mv__carousel-content-desc">A renovated apartment for rent by owner. 2 bedroom 2 full baths, living and dining room</p>
+                                <p class="c-mv__carousel-content-price">
+                                    <span>$216.00</span>
+                                    <span>/day</span>
+                                </p>
+                                <button class="c-mv__carousel-content-button">BOOK NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-mv__carousel-item swiper-slide">
+                        <img class="c-mv__carousel-image" src="/images/mv-img-03.jpg" alt="slide">
+                        <div class="c-mv__carousel-content">
+                            <div class="container--medium">
+                                <h1 class="c-mv__carousel-content-title">Modera Lofts</h1>
+                                <p class="c-mv__carousel-content-desc">Make Modera Lofts your home and reside in historic Jersey City style.</p>
+                                <p class="c-mv__carousel-content-price">
+                                    <span>$239.00</span>
+                                    <span>/day</span>
+                                </p>
+                                <button class="c-mv__carousel-content-button">BOOK NOW</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="c-mv__slick-item">
-                    <img class="c-mv__slick-image" src="/images/mv-img-02.jpg" alt="slide">
-                    <div class="c-mv__slick-content">
-                        <div class="container--medium">
-                            <h1 class="c-mv__slick-content-title">53 Rachel Ct 53</h1>
-                            <p class="c-mv__slick-content-desc">A renovated apartment for rent by owner. 2 bedroom 2 full baths, living and dining room</p>
-                            <p class="c-mv__slick-content-price">
-                                <span>$216.00</span>
-                                <span>/day</span>
-                            </p>
-                            <button class="c-mv__slick-content-button">BOOK NOW</button>
+                <div class="swiper-pagination container--medium"></div>
+            </div>
+        </section>
+        <section class="c-form-search">
+            <div class="container--medium">
+                <div class="c-form-search__inner">
+                    <h2 class="c-form-search__title">Find Your Home</h2>
+                    <form class="c-form-search__form">
+                        <div class="u-flex u-flex__y--center u-flex__x--between">
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Keyword</label>
+                                <input id="@@id" class="c-input" type="text" value="" placeholder="Any">
+                            </div>
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Location</label>
+                                <div class="c-dropdown">
+                                    <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
+                                    <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
+                                    <div class="c-dropdown__options">
+                                        <span class="c-dropdown__option hover-color-red" value="Any"> Any </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Denver"> Denver </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Houston"> Houston </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Las Vegas"> Las Vegas </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Orlando"> Orlando </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Phoenix"> Phoenix </span>
+                                        <span class="c-dropdown__option hover-color-red" value="San Diego"> San Diego </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Miami"> Miami </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Atlanta"> Atlanta </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Property Status</label>
+                                <div class="c-dropdown">
+                                    <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
+                                    <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
+                                    <div class="c-dropdown__options">
+                                        <span class="c-dropdown__option hover-color-red" value="Any"> Any </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Denver"> Denver </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Houston"> Houston </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Las Vegas"> Las Vegas </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Orlando"> Orlando </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Phoenix"> Phoenix </span>
+                                        <span class="c-dropdown__option hover-color-red" value="San Diego"> San Diego </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Miami"> Miami </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Atlanta"> Atlanta </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Property Type</label>
+                                <div class="c-dropdown">
+                                    <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
+                                    <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
+                                    <div class="c-dropdown__options">
+                                        <span class="c-dropdown__option hover-color-red" value="Any"> Any </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Denver"> Denver </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Houston"> Houston </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Las Vegas"> Las Vegas </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Orlando"> Orlando </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Phoenix"> Phoenix </span>
+                                        <span class="c-dropdown__option hover-color-red" value="San Diego"> San Diego </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Miami"> Miami </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Atlanta"> Atlanta </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="c-mv__slick-item">
-                    <img class="c-mv__slick-image" src="/images/mv-img-03.jpg" alt="slide">
-                    <div class="c-mv__slick-content">
-                        <div class="container--medium">
-                            <h1 class="c-mv__slick-content-title">Modera Lofts</h1>
-                            <p class="c-mv__slick-content-desc">Make Modera Lofts your home and reside in historic Jersey City style.</p>
-                            <p class="c-mv__slick-content-price">
-                                <span>$239.00</span>
-                                <span>/day</span>
-                            </p>
-                            <button class="c-mv__slick-content-button">BOOK NOW</button>
+                        <div class="u-flex u-flex__y--flex-start u-flex__x--between">
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Price (USD)</label>
+                                <div class="slider-content">
+                                    <div class="c-form-search__form-input-group u-flex u-flex__y--center u-flex__x--between">
+                                        <input id="range-slider-price-min" class="c-input" type="text" value="100" placeholder="" disabled>
+                                        <span class="c-form-search__form-dash">-</span>
+                                        <input id="range-slider-price-max" class="c-input" type="text" value="8000" placeholder="" disabled>
+                                    </div>
+                                    <div id="range-slider-price" se-min="100" se-step="10" se-min-value="100" se-max-value="8000" se-max="8000" class="slider">
+                                        <div class="slider-touch-left">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-touch-right">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Area (Sq Ft)</label>
+                                <div class="slider-content">
+                                    <div class="c-form-search__form-input-group u-flex u-flex__y--center u-flex__x--between">
+                                        <input id="range-slider-area-min" class="c-input" type="text" value="1000" placeholder="" disabled>
+                                        <span class="c-form-search__form-dash">-</span>
+                                        <input id="range-slider-area-max" class="c-input" type="text" value="22000" placeholder="" disabled>
+                                    </div>
+                                    <div id="range-slider-area" se-min="1000" se-step="100" se-min-value="1000" se-max-value="22000" se-max="22000" class="slider">
+                                        <div class="slider-touch-left">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-touch-right">
+                                            <span></span>
+                                        </div>
+                                        <div class="slider-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Min Beds</label>
+                                <div class="c-dropdown">
+                                    <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
+                                    <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
+                                    <div class="c-dropdown__options">
+                                        <span class="c-dropdown__option hover-color-red" value="Any"> Any </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Denver"> Denver </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Houston"> Houston </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Las Vegas"> Las Vegas </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Orlando"> Orlando </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Phoenix"> Phoenix </span>
+                                        <span class="c-dropdown__option hover-color-red" value="San Diego"> San Diego </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Miami"> Miami </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Atlanta"> Atlanta </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-form-search__form-group">
+                                <label class="c-form-search__form-label">Min Baths</label>
+                                <div class="c-dropdown">
+                                    <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
+                                    <input type="text" class="c-dropdown__text-box" placeholder="Any" readonly>
+                                    <div class="c-dropdown__options">
+                                        <span class="c-dropdown__option hover-color-red" value="Any"> Any </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Denver"> Denver </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Houston"> Houston </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Las Vegas"> Las Vegas </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Orlando"> Orlando </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Phoenix"> Phoenix </span>
+                                        <span class="c-dropdown__option hover-color-red" value="San Diego"> San Diego </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Miami"> Miami </span>
+                                        <span class="c-dropdown__option hover-color-red" value="Atlanta"> Atlanta </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="c-button-summit hover-opacity">SEARCH</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
         <footer class="c-footer">
         </footer>
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/jquery.fancybox.min.js"></script>
-        <script src="js/slick.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -1,15 +1,16 @@
 .c-mv {
     position: relative;
     z-index: 1;
-    &__slick {
-        .slick-dots {
-            text-align: right;
-            bottom: 238px;
-            right: -5px;
-        }
+    .swiper-pagination {
+        bottom: 230px;
+        justify-content: flex-end;
+    }
+    .c-carousel {
+        height: 620px;
+    }
+    &__carousel {
         &-item {
             position: relative;
-            height: 620px;
         }
         &-image {
             width: 100%;
@@ -52,10 +53,10 @@
                 padding: 10px 23px;
                 letter-spacing: 1.3px;
                 font-weight: 600;
+                transition: all 0.3s ease;
                 &:hover {
                     background-color: $color_red;
                     border-color: $color_red;
-                    transition: all 0.3s ease;
                 }
             }
         }

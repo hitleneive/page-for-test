@@ -1,0 +1,19 @@
+<div class="slider-content">
+    <div class="c-form-search__form-input-group u-flex u-flex__y--center u-flex__x--between">
+        @@include('./input-disable.html',{ "id": "@@id-min", "defaultValue": "@@fromValue", 'placeholder': '', "disabled": "disabled" })
+        <span class="c-form-search__form-dash">-</span>
+        @@include('./input-disable.html',{ "id": "@@id-max", "defaultValue": "@@toValue", 'placeholder': '', "disabled": "disabled" })
+    </div>
+    <div id="@@id" se-min="@@fromValue" se-step="@@step" se-min-value="@@fromValue" se-max-value="@@toValue"
+        se-max="@@toValue" class="slider">
+        <div class="slider-touch-left">
+            <span></span>
+        </div>
+        <div class="slider-touch-right">
+            <span></span>
+        </div>
+        <div class="slider-line">
+            <span></span>
+        </div>
+    </div>
+</div>

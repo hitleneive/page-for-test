@@ -1,0 +1,48 @@
+.c-form-search {
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    .c-input,
+    .c-dropdown {
+        width: 100%;
+    }
+    .c-dropdown {
+        input {
+            width: 100%;
+        }
+    }
+    &__inner {
+        background-color: $color-white;
+        box-shadow: 0 0 10px #00000022;
+        padding: 25px 30px;
+    }
+    &__title {
+        font-size: 30px;
+        margin-bottom: 26px;
+    }
+    &__form {
+        .c-button-summit {
+            margin-top: 28px;
+            min-width: 160px;
+        }
+        .slider {
+            margin: 12px -10px 0;
+        }
+    }
+    &__form-group {
+        flex: 1;
+        margin-bottom: 28px;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    &__form-label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    &__form-dash {
+        color: $color_grey;
+        margin: 0 12px;
+    }
+}

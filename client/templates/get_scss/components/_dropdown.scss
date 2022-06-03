@@ -1,0 +1,50 @@
+.c-dropdown {
+    position: relative;
+    &.active {
+        .c-dropdown {
+            box-shadow: 0 2px 4px 0px #00000022;
+            &__options {
+                opacity: 1;
+                z-index: 10;
+                visibility: visible;
+            }
+        }
+    }
+    &__text {
+        &-box {
+            border: none;
+            box-shadow: inset 0 1px 0px 1px #00000009;
+            background: $color_grey_light;
+            font-size: 18px;
+            color: $color_grey;
+            padding: 10px 20px;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &__options {
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        position: absolute;
+        background: $color_grey_light;
+        box-shadow: 0 2px 4px 0px #00000022;
+        width: 100%;
+    }
+    &__option {
+        display: block;
+        padding: 8px 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    &__icon {
+        color: $color_grey;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 13px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="c-dropdown">
+    <i class="fa-solid fa-angle-down c-dropdown__icon"></i>
+    <input type="text" class="c-dropdown__text-box" placeholder="@@defaultSelect" readonly>
+    <div class="c-dropdown__options">
+        @@for (var i = 0; i < options.length; i++) { <span class="c-dropdown__option hover-color-red" value="`+options[i]+`">
+            `+options[i]+`
+            </span>
+            }
+    </div>
+</div>
