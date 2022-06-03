@@ -1,0 +1,10 @@
+.c-heading-section {
+    font-size: 48px;
+    line-height: 62px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 23px;
+    &::before {
+        width: 100px;
+    }
+}
