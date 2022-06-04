@@ -13,7 +13,6 @@ body {
 
     @include bp("sp") {
         overflow-x: hidden;
-        padding-top: calculateRem(60px);
         min-width: 300px;
 
         hr {

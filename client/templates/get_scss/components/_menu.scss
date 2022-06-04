@@ -17,7 +17,6 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        overflow: hidden;
         @media screen and (max-width: 1600px) {
             order: 2;
             justify-content: space-between;
@@ -26,6 +25,10 @@
         }
         &-item {
             position: relative;
+            &:last-child &-dropdown {
+                right: 0;
+                left: unset;
+            }
             &:hover {
                 .c-menu__menu-item-dropdown {
                     opacity: 1;
