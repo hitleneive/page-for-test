@@ -9,10 +9,18 @@
         font-size: 18px;
     }
     .c-left-header {
+        @media screen and (max-width: 1600px) {
+            justify-content: space-between;
+            flex: 1;
+            margin-right: 40px;
+        }
         &__logo {
             display: flex;
             align-items: center;
             margin-right: 118px;
+            @media screen and (max-width: 1600px) {
+                margin-right: 0;
+            }
             &-text {
                 color: $color_red;
                 margin-left: 12px;
@@ -23,6 +31,9 @@
             display: flex;
             align-items: center;
             margin-right: 56px;
+            @media screen and (max-width: 1600px) {
+                margin-right: 0;
+            }
             &-number {
                 font-size: 18px;
                 margin-left: 10px;
@@ -33,6 +44,9 @@
             display: flex;
             align-items: center;
             margin-right: 205px;
+            @media screen and (max-width: 1600px) {
+                margin-right: 0;
+            }
             &-text {
                 font-size: 18px;
                 margin-left: 10px;

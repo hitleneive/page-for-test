@@ -1,6 +1,7 @@
 body {
     font-family: $font_base;
     background-color: $color_grey_light;
+    min-width: $pc_width_max;
 
     a:hover {
         opacity: 0.8;

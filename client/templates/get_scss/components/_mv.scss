@@ -3,10 +3,10 @@
     z-index: 1;
     .dots {
         width: 100%;
-        max-width: calculateRem($pc_width_max);
+        max-width: $pc_width_max;
         margin: 0 auto;
-        padding-left: calculateRem(75px);
-        padding-right: calculateRem(75px);
+        padding-left: 75px;
+        padding-right: 75px;
         position: relative;
         top: -230px;
         justify-content: flex-end;

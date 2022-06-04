@@ -3,10 +3,27 @@
     z-index: 2;
     padding: 40px 0;
     background-color: $color_white;
+    .c-logo {
+        @media screen and (max-width: 1600px) {
+            order: 0;
+        }
+    }
+    .c-button-summit {
+        @media screen and (max-width: 1600px) {
+            order: 1;
+        }
+    }
     &__menu {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        overflow: hidden;
+        @media screen and (max-width: 1600px) {
+            order: 2;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 28px;
+        }
         &-item {
             position: relative;
             &:hover {
@@ -21,6 +38,9 @@
                 margin: 0 29px;
                 letter-spacing: 2px;
                 font-weight: 600;
+                @media screen and (max-width: 1600px) {
+                    margin: 0;
+                }
                 &:hover {
                     color: $color_red_500;
                 }
