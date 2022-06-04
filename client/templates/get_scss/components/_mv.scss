@@ -10,7 +10,9 @@
         position: relative;
         top: -230px;
         justify-content: flex-end;
-
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
         .dot {
             background-color: $color_white;
             opacity: 0.3;
@@ -22,6 +24,9 @@
     }
     .keen-slider {
         height: 620px;
+        @media screen and (max-width: 767px) {
+            height: 286px;
+        }
     }
     &__carousel {
         &-item {
@@ -36,6 +41,9 @@
             position: absolute;
             top: 78px;
             width: 100%;
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
             &-title {
                 color: $color-white;
                 font-size: 64px;
