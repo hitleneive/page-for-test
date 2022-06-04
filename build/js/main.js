@@ -1,5 +1,5 @@
 window.onload = function () {
-  const swiper1 = new Swiper(".c-carousel", {
+  const swiper = new Swiper(".c-carousel", {
     direction: "horizontal",
     loop: true,
     pagination: {
@@ -13,7 +13,7 @@ window.onload = function () {
     },
   });
 
-  const swiper2 = new Swiper("#testimonials-carousel", {
+  const testimonialsSlider = new Swiper("#testimonials-carousel", {
     direction: "horizontal",
     loop: true,
     pagination: {
@@ -28,14 +28,57 @@ window.onload = function () {
     },
   });
 
-  var slider = new KeenSlider(".c-members__list", {
-    loop: true,
-    rtl: true,
-    spaceBetween: 0,
-    slides: {
-      perView: 4,
+  var memberSlider = new KeenSlider(
+    ".c-members__list",
+    {
+      loop: true,
+      slides: {
+        perView: 4,
+      },
     },
-  });
+    [autoSlide]
+  );
+
+  function autoSlide(slider) {
+    let timeout;
+    let mouseOver = false;
+    function clearNextTimeout() {
+      clearTimeout(timeout);
+    }
+    function nextTimeout() {
+      clearTimeout(timeout);
+      if (mouseOver) return;
+      timeout = setTimeout(() => {
+        slider.next();
+      }, 3000);
+    }
+    slider.on("created", () => {
+      slider.container.addEventListener("mouseover", () => {
+        mouseOver = true;
+        clearNextTimeout();
+      });
+      slider.container.addEventListener("mouseout", () => {
+        mouseOver = false;
+        nextTimeout();
+      });
+      nextTimeout();
+    });
+    slider.on("dragStarted", clearNextTimeout);
+    slider.on("animationEnded", nextTimeout);
+    slider.on("updated", nextTimeout);
+  }
+
+  document
+    .querySelector(".c-members__slide-right")
+    .addEventListener("click", function () {
+      memberSlider.next();
+    });
+
+  document
+    .querySelector(".c-members__slide-left")
+    .addEventListener("click", function () {
+      memberSlider.prev();
+    });
 
   // dropdown
   window.addEventListener("click", function (e) {

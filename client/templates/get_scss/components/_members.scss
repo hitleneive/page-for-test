@@ -1,5 +1,6 @@
 .c-members {
     &__list {
+        position: relative;
     }
     &__items {
     }
@@ -44,6 +45,31 @@
             padding: 0;
             opacity: 0;
             position: absolute;
+        }
+    }
+    &__slide {
+        &-right,
+        &-left {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &:hover {
+                i {
+                    color: $color_red;
+                }
+            }
+            i {
+                color: $color_white;
+                font-size: 40px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+        }
+        &-right {
+            right: 40px;
+        }
+        &-left {
+            left: 40px;
         }
     }
 }
