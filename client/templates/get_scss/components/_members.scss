@@ -26,6 +26,10 @@
             position: absolute;
             bottom: 30px;
             left: 40px;
+            @media screen and (max-width: 767px) {
+                bottom: 32px;
+                left: 16px;
+            }
         }
         &-title {
             font-size: 24px;
@@ -53,6 +57,10 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+
+            @media screen and (max-width: 767px) {
+                top: 40%;
+            }
             &:hover {
                 i {
                     color: $color_red;
