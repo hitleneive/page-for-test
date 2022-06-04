@@ -112,3 +112,24 @@ body {
         color: $color_red;
     }
 }
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $color_grey;
+        cursor: pointer;
+        margin: 0 14px;
+        transition: all 0.3s ease;
+        &--active {
+            width: 20px;
+            height: 20px;
+            background-color: $color_red;
+        }
+    }
+}

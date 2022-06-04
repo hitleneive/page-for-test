@@ -1,5 +1,6 @@
 .c-testimonials {
     padding-top: 90px;
+    padding-bottom: 90px;
     position: relative;
     background-color: $color_white;
     .c-heading-section {
@@ -8,7 +9,6 @@
     }
     &__inner {
         overflow: hidden;
-        padding-bottom: 150px;
     }
     &__carousel {
         &-item {
@@ -30,32 +30,7 @@
             }
         }
     }
-    .swiper {
-        overflow: visible;
-        height: 170px;
-    }
-    .swiper-slide {
-        display: flex;
-        min-width: 100%;
-        .c-testimonials__carousel-item {
-            &:not(:last-child) {
-                margin-right: 30px;
-            }
-        }
-    }
-}
-
-.swiper-pagination-testimonials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: -40px !important;
-    left: -12px !important;
-    .swiper-pagination-bullet {
-        background-color: $color_grey;
-        opacity: 1 !important;
-        &.swiper-pagination-bullet-active {
-            background-color: $color-red;
-        }
+    .dots {
+        margin-top: 66px;
     }
 }

@@ -13,23 +13,19 @@ window.onload = function () {
     },
   });
 
-  const testimonialsSlider = new Swiper("#testimonials-carousel", {
-    direction: "horizontal",
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination-testimonials",
-      clickable: true,
+  const testimonialsSlider = new KeenSlider(
+    "#testimonialsSlider",
+    {
+      loop: true,
+      slides: {
+        perView: 3,
+      },
     },
-
-    longSwipesMs: 1000,
-    autoplay: {
-      delay: 3000,
-      pauseOnMouseEnter: true,
-    },
-  });
+    [autoSlide, navigation]
+  );
 
   var memberSlider = new KeenSlider(
-    ".c-members__list",
+    "#memberSlider",
     {
       loop: true,
       slides: {
@@ -39,7 +35,79 @@ window.onload = function () {
     [autoSlide]
   );
 
-  function autoSlide(slider) {
+  function navigation(slider) {
+    let wrapper, dots;
+  
+    function markup(remove) {
+      wrapperMarkup(remove);
+      dotMarkup(remove);
+    }
+  
+    function removeElement(elment) {
+      elment.parentNode.removeChild(elment);
+    }
+    function createDiv(className) {
+      var div = document.createElement("div");
+      var classNames = className.split(" ");
+      classNames.forEach((name) => div.classList.add(name));
+      return div;
+    }
+  
+    function wrapperMarkup(remove) {
+      if (remove) {
+        var parent = wrapper.parentNode;
+        while (wrapper.firstChild)
+          parent.insertBefore(wrapper.firstChild, wrapper);
+        removeElement(wrapper);
+        return;
+      }
+      wrapper = createDiv("navigation-wrapper");
+      slider.container.parentNode.appendChild(wrapper);
+      wrapper.appendChild(slider.container);
+    }
+  
+    function dotMarkup(remove) {
+      if (remove) {
+        removeElement(dots);
+        return;
+      }
+      dots = createDiv("dots");
+      slider.track.details.slides.forEach((_e, idx) => {
+        var dot = createDiv("dot");
+        dot.addEventListener("click", () => slider.moveToIdx(idx));
+        dots.appendChild(dot);
+      });
+      wrapper.appendChild(dots);
+    }
+  
+    function updateClasses() {
+      var slide = slider.track.details.rel;
+      Array.from(dots.children).forEach(function (dot, idx) {
+        idx === slide
+          ? dot.classList.add("dot--active")
+          : dot.classList.remove("dot--active");
+      });
+    }
+  
+    slider.on("created", () => {
+      markup();
+      updateClasses();
+    });
+    slider.on("optionsChanged", () => {
+      console.log(2);
+      markup(true);
+      markup();
+      updateClasses();
+    });
+    slider.on("slideChanged", () => {
+      updateClasses();
+    });
+    slider.on("destroyed", () => {
+      markup(true);
+    });
+  }
+
+  function autoSlide(slider, duration = 3000) {
     let timeout;
     let mouseOver = false;
     function clearNextTimeout() {
@@ -50,7 +118,7 @@ window.onload = function () {
       if (mouseOver) return;
       timeout = setTimeout(() => {
         slider.next();
-      }, 3000);
+      }, duration);
     }
     slider.on("created", () => {
       slider.container.addEventListener("mouseover", () => {
