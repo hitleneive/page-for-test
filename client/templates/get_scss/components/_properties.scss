@@ -30,6 +30,7 @@ $space-between-item: 30px;
         margin-bottom: 55px;
         @media screen and (max-width: 767px) {
             max-width: 100%;
+            width: 100%;
             margin-bottom: 47px;
         }
         &-image-block {
@@ -37,6 +38,7 @@ $space-between-item: 30px;
             overflow: hidden;
             position: relative;
             margin-bottom: 20px;
+            cursor: pointer;
             @media screen and (max-width: 767px) {
                 height: 209px;
                 margin-bottom: 18px;

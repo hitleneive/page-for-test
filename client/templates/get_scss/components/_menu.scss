@@ -19,19 +19,21 @@
         }
     }
     &__menu-toggle {
-        height: 0px;
-        overflow: hidden;
-        opacity: 0;
-        transition: all 0.3s ease;
-        background-color: $color_white;
-        flex: 1;
-        position: relative;
-        .c-logo {
-            @media screen and (max-width: 1700px) {
-                order: 0;
-            }
-            @media screen and (max-width: 767px) {
-                display: none;
+        @media screen and (max-width: 767px) {
+            height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            background-color: $color_white;
+            flex: 1;
+            position: relative;
+            .c-logo {
+                @media screen and (max-width: 1700px) {
+                    order: 0;
+                }
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
             }
         }
         .c-menu__menu {
@@ -90,26 +92,22 @@
                 right: 0;
                 left: unset;
             }
-            .c-menu__menu-item-dropdown {
-                &:hover {
+            &:hover {
+                .c-menu__menu-item-dropdown {
                     @media screen and (min-width: 768px) {
-                        .c-menu__menu-item-dropdown {
-                            opacity: 1;
-                            visibility: visible;
-                            z-index: 10;
-                            @media screen and (max-width: 767px) {
-                                top: 0 !important;
-                                left: 0 !important;
-                            }
-                        }
-                    }
-                }
-                &.active {
-                    @media screen and (max-width: 767px) {
                         opacity: 1;
                         visibility: visible;
                         z-index: 10;
                         @media screen and (max-width: 767px) {
+                            top: 0 !important;
+                            left: 0 !important;
+                        }
+                    }
+                    &.active {
+                        @media screen and (max-width: 767px) {
+                            opacity: 1;
+                            visibility: visible;
+                            z-index: 10;
                             top: 0 !important;
                             left: 0 !important;
                         }

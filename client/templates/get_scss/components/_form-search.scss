@@ -74,7 +74,7 @@
             }
         }
         &-beds {
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
                 display: inline-block;
                 min-width: 49%;
                 width: 49%;
@@ -82,11 +82,18 @@
             }
         }
         &-baths {
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
                 display: inline-block;
                 min-width: 49%;
                 width: 49%;
                 margin-left: 1%;
+            }
+            .c-form-search__form-dropdown {
+                .c-dropdown__options {
+                    @media screen and (max-width: 767px) {
+                        right: 0;
+                    }
+                }
             }
         }
     }
