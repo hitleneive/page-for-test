@@ -3,18 +3,32 @@ $space-between-item: 30px;
 .c-categories {
     padding-top: 70px;
     padding-bottom: 90px;
+    @media screen and (max-width: 767px) {
+        padding-top: 60px;
+    }
     .c-heading-section {
         margin-bottom: 60px;
         cursor: default;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 66px;
+        }
     }
     &__list {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
         &-left {
             display: flex;
             flex-direction: column;
-            margin-right: $space-between-item;
+            @media screen and (min-width: 768px) {
+                margin-right: $space-between-item;
+            }
+            @media screen and (max-width: 767px) {
+                margin-bottom: $space-between-item;
+            }
             .c-categories__item {
                 flex: 1;
                 &:not(:last-child) {
@@ -24,11 +38,19 @@ $space-between-item: 30px;
         }
         &-center {
             min-height: 100%;
+            @media screen and (max-width: 767px) {
+                order: 3;
+            }
         }
         &-right {
             display: flex;
             flex-direction: column;
-            margin-left: $space-between-item;
+            @media screen and (min-width: 768px) {
+                margin-left: $space-between-item;
+            }
+            @media screen and (max-width: 767px) {
+                margin-bottom: $space-between-item;
+            }
             .c-categories__item {
                 flex: 1;
                 &:not(:last-child) {
@@ -67,6 +89,9 @@ $space-between-item: 30px;
             color: $color-white;
             font-size: 24px;
             line-height: 32px;
+            @media screen and (max-width: 767px) {
+                font-weight: 500;
+            }
         }
         &-properies {
             color: $color-white;

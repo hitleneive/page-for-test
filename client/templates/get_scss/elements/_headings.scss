@@ -4,7 +4,15 @@
     position: relative;
     display: inline-block;
     padding-bottom: 23px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+        line-height: 40px;
+    }
     &::before {
         width: 100px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
