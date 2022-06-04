@@ -9,7 +9,7 @@
         font-size: 18px;
     }
     .c-left-header {
-        @media screen and (max-width: 1600px) {
+        @media screen and (max-width: 1700px) {
             justify-content: space-between;
             flex: 1;
             margin-right: 40px;
@@ -18,7 +18,7 @@
             display: flex;
             align-items: center;
             margin-right: 118px;
-            @media screen and (max-width: 1600px) {
+            @media screen and (max-width: 1700px) {
                 margin-right: 0;
             }
             &-text {
@@ -31,7 +31,7 @@
             display: flex;
             align-items: center;
             margin-right: 56px;
-            @media screen and (max-width: 1600px) {
+            @media screen and (max-width: 1700px) {
                 margin-right: 0;
             }
             &-number {
@@ -44,7 +44,7 @@
             display: flex;
             align-items: center;
             margin-right: 205px;
-            @media screen and (max-width: 1600px) {
+            @media screen and (max-width: 1700px) {
                 margin-right: 0;
             }
             &-text {

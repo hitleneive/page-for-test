@@ -15,4 +15,9 @@
             transition: all 0.3s ease;
         }
     }
+    .c-button-summit {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
 }

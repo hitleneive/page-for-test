@@ -1,40 +1,46 @@
 <section class="c-menu">
-    <div class="container u-flex--wrap u-flex__y--center u-flex__x--between">
-        @@include('./logo.html')
-        <div class="c-menu__menu">
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">HOME</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">ELEMENTS</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">FEATURES</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">EXTRAS</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">PROPERTY CATALOG</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">PAGES</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">BLOG</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
-            <div class="c-menu__menu-item">
-                <span class="c-menu__menu-item-name hover-animation--red">GALLERY</span>
-                @@include('../components/dropdown-menu.html')
-            </div>
+    <div class="container">
+        <div class="c-menu__menu-fixed">
+            <i id="menuToggle" class="c-menu__menu-fixed-icon fa-solid fa-bars"></i>
+            @@include('./logo.html')
         </div>
-        <button class="c-button-summit hover-opacity">SUBMIT PROPERTY</button>
+        <div id="menuContent" class="c-menu__menu-toggle u-flex--wrap u-flex__y--center u-flex__x--between">
+            @@include('./logo.html')
+            <div class="c-menu__menu">
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">HOME</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">ELEMENTS</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">FEATURES</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">EXTRAS</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">PROPERTY CATALOG</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">PAGES</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">BLOG</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+                <div class="c-menu__menu-item">
+                    <span class="c-menu__menu-item-name hover-animation--red">GALLERY</span>
+                    @@include('../components/dropdown-menu.html')
+                </div>
+            </div>
+            <button class="c-button-summit hover-opacity">SUBMIT PROPERTY</button>
+        </div>
     </div>
 </section>
