@@ -17,6 +17,13 @@ window.onload = function () {
       slides: {
         perView: 3,
       },
+      breakpoints: {
+        "(max-width: 767px)": {
+          slides: {
+            perView: 1,
+          },
+        },
+      },
     },
     [autoSlide, navigation]
   );
@@ -27,6 +34,13 @@ window.onload = function () {
       loop: true,
       slides: {
         perView: 4,
+      },
+      breakpoints: {
+        "(max-width: 767px)": {
+          slides: {
+            perView: 1,
+          },
+        },
       },
     },
     [autoSlide]

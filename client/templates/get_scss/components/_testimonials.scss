@@ -3,6 +3,10 @@
     padding-bottom: 90px;
     position: relative;
     background-color: $color_white;
+    @media screen and (max-width: 767px) {
+        padding-top: 61px;
+        padding-bottom: 110px;
+    }
     .c-heading-section {
         cursor: default;
         margin-bottom: 56px;
@@ -16,6 +20,9 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 20px;
+                @media screen and (max-width: 767px) {
+                    justify-content: center;
+                }
             }
             &-image {
                 margin-right: 20px;
@@ -24,13 +31,23 @@
             &-title {
                 font-size: 18px;
                 font-weight: 500;
+                @media screen and (max-width: 767px) {
+                    font-size: 21px;
+                }
             }
             &-desc {
                 font-style: italic;
+                @media screen and (max-width: 767px) {
+                    text-align: center;
+                    line-height: 1.75;
+                }
             }
         }
     }
     .dots {
         margin-top: 64px;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 }

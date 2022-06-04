@@ -17,6 +17,13 @@ window.onload = function () {
       slides: {
         perView: 3,
       },
+      breakpoints: {
+        "(max-width: 767px)": {
+          slides: {
+            perView: 1,
+          },
+        },
+      },
     },
     [autoSlide, navigation]
   );
