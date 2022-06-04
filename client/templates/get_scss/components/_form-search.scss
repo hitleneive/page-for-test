@@ -1,6 +1,6 @@
 .c-form-search {
     position: relative;
-    top: -150px;
+    top: -170px;
     z-index: 1;
     margin-bottom: -150px;
     .c-input,
@@ -15,7 +15,7 @@
     &__inner {
         background-color: $color-white;
         box-shadow: 0 0 10px #00000022;
-        padding: 25px 30px;
+        padding: 25px 30px 28px;
     }
     &__title {
         font-size: 30px;
@@ -34,7 +34,7 @@
             margin-top: 28px;
         }
         .slider {
-            margin: 12px 0 0;
+            margin: 20px 0 0;
         }
     }
     &__form-group {
@@ -65,7 +65,7 @@
     &__form-plus {
         display: flex;
         align-items: center;
-        margin-top: 16px;
+        margin-top: 24px;
         &-icon {
             color: $color-white;
             background: $color-red;

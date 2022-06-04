@@ -1,17 +1,14 @@
 window.onload = function () {
-  const swiper = new Swiper(".c-carousel", {
-    direction: "horizontal",
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+  const mvSlider = new KeenSlider(
+    "#mvSlider",
+    {
+      loop: true,
+      slides: {
+        perView: 1,
+      },
     },
-    longSwipesMs: 1000,
-    autoplay: {
-      delay: 3000,
-      pauseOnMouseEnter: true,
-    },
-  });
+    [autoSlide, navigation]
+  );
 
   const testimonialsSlider = new KeenSlider(
     "#testimonialsSlider",
@@ -37,12 +34,12 @@ window.onload = function () {
 
   function navigation(slider) {
     let wrapper, dots;
-  
+
     function markup(remove) {
       wrapperMarkup(remove);
       dotMarkup(remove);
     }
-  
+
     function removeElement(elment) {
       elment.parentNode.removeChild(elment);
     }
@@ -52,7 +49,7 @@ window.onload = function () {
       classNames.forEach((name) => div.classList.add(name));
       return div;
     }
-  
+
     function wrapperMarkup(remove) {
       if (remove) {
         var parent = wrapper.parentNode;
@@ -65,7 +62,7 @@ window.onload = function () {
       slider.container.parentNode.appendChild(wrapper);
       wrapper.appendChild(slider.container);
     }
-  
+
     function dotMarkup(remove) {
       if (remove) {
         removeElement(dots);
@@ -79,7 +76,7 @@ window.onload = function () {
       });
       wrapper.appendChild(dots);
     }
-  
+
     function updateClasses() {
       var slide = slider.track.details.rel;
       Array.from(dots.children).forEach(function (dot, idx) {
@@ -88,7 +85,7 @@ window.onload = function () {
           : dot.classList.remove("dot--active");
       });
     }
-  
+
     slider.on("created", () => {
       markup();
       updateClasses();

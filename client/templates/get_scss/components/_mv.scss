@@ -1,11 +1,17 @@
 .c-mv {
     position: relative;
     z-index: 1;
-    .swiper-pagination {
-        bottom: 230px;
+    .dots {
+        width: 100%;
+        max-width: calculateRem($pc_width_max);
+        margin: 0 auto;
+        padding-left: calculateRem(75px);
+        padding-right: calculateRem(75px);
+        position: relative;
+        top: -230px;
         justify-content: flex-end;
     }
-    .c-carousel {
+    .keen-slider {
         height: 620px;
     }
     &__carousel {

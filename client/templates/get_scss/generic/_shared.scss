@@ -124,8 +124,10 @@ body {
         border-radius: 50%;
         background-color: $color_grey;
         cursor: pointer;
-        margin: 0 14px;
         transition: all 0.3s ease;
+        & + .dot {
+            margin-left: 28px;
+        }
         &--active {
             width: 20px;
             height: 20px;
