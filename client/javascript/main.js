@@ -212,6 +212,18 @@ window.onload = function () {
     menuContent.classList.toggle("active");
   });
 
+  document.getElementById("to-top").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset < 100) {
+      document.getElementById("to-top").classList.add("hide");
+    } else {
+      document.getElementById("to-top").classList.remove("hide");
+    }
+  });
+
   //range slider
   var ZBRangeSlider = function (id) {
     var self = this;
