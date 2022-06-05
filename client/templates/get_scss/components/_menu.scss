@@ -37,7 +37,9 @@
             }
         }
         .c-menu__menu {
-            order: 0;
+            @media screen and (max-width: 767px) {
+                order: 0;
+            }
         }
         &.active {
             height: 100%;

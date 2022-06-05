@@ -204,11 +204,11 @@ window.onload = function () {
 
   document.getElementById("menuToggle").addEventListener("click", function () {
     const menuContent = document.getElementById("menuContent");
-    if (menuContent.classList.contains("active")) {
-      document.body.style.overflow = "auto";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
+    // if (menuContent.classList.contains("active")) {
+    //   document.body.style.overflow = "auto";
+    // } else {
+    //   document.body.style.overflow = "hidden";
+    // }
     menuContent.classList.toggle("active");
   });
 
